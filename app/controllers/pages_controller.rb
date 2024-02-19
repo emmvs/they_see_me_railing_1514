@@ -17,7 +17,6 @@ class PagesController < ApplicationController
     if params["student_name"]
       @students = @students.select { |student| student.start_with?(params["student_name"]) }
     end
-    raise
     # raise # throws an exception/error
   end
 end
