@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Download this file by running 
 
-Things you may want to cover:
+git clone git@github.com:emmvs/they_see_me_railing_1514.git
 
-* Ruby version
+start the rails server by running
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+rails s
