@@ -1,4 +1,41 @@
-<h1>Welcome home 🐝</h1>
+<h1>Welcome home! 🍕</h1>
 
-<%= link_to 'about', about_path, class: "btn" %>
-<%= link_to 'contact', contact_path, class: "btn" %>
+<!-- ER TAG -->
+<%# total = 1 + 1 %>
+<%# students = ["francesca", "michalis", "frederic", "daniel", "gonzalo"] %>
+
+<!-- PE TAG (P stand for puts/ comes w/ "="") -->
+<%#= total %>
+
+
+<h2>Meet our beautiful students from batch #1514 🐝</h2>
+<ol>
+  <% @students.each do |student| %>
+    <li><%= student.capitalize %></li>
+  <% end %>
+</ol>
+
+<%# Forms send by default POST requests %>
+<%# action leads us to the page where we want to be %>
+<form action="/home" method="get"> 
+  <input 
+  type="text" 
+  name="student_name"
+  value="<%= params["student_name"] %>" 
+  placeholder="Which student?">
+  <input type="submit">
+</form>
+
+<p>The slected student is <%= params["student_name"] %> </p>
+
+<%# Rails helper %>
+<%# Inbuild mehtods that help us lol %>
+<%# <a href="/contact">Contact Page</a> %>
+
+<%= link_to 'Contact Page', contact_path %>
+<%= link_to 'About Page', about_path %>
+
+
+<p>Today is <%= Date.today %></p>
+
+
